@@ -1,0 +1,13 @@
+{
+	"header": {"col1": "Name","col2": "Package Manager (developer)","col3": "Repository (internet)","col4": "Local Package Database","col5": ""},
+	"body": [
+		{"col1":"NodeJS","col2":"npm","col3":"npmjs.com","col4":"package.json","col5":""},
+		{"col1":"Red Hat OS","col2":"Yum","col3":"","col4":"","col5":""},
+		{"col1":"Debian OS","col2":"Apt-Get","col3":"","col4":"","col5":""},
+		{"col1":"MacOS","col2":"homebrew","col3":"","col4":"","col5":""},
+		{"col1":"Windows","col2":"chocolatey","col3":"","col4":"","col5":""},
+		{"col1":"Web","col2":"bower","col3":"","col4":"","col5":""},
+		{"col1":"Java","col2":"maven","col3":"Maven Central","col4":"","col5":""},
+		{"col1":".NET","col2":"nuget","col3":"nuget","col4":"packages.config/project.json","col5":""},
+		{"col1":"PHP","col2":"composer","col3":"packagist","col4":"","col5":""}
+]}

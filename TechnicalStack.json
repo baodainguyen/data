@@ -1,0 +1,11 @@
+{
+    "header": {"col1": "Technical Stack","col2": "Hệ điều hành","col3": "Web Server","col4": "Database Server","col5": "Back-end Programming Language"},
+    "body": [
+            {"col1":"LAMP","col2":"Linux","col3":"Apache","col4":"MySQL/MariaDB","col5":"PHP/PyThon"},
+            {"col1":"MAMP","col2":"MAC/Win OS","col3":"Apache/Nginx","col4":"MySQL","col5":"PHP/Python/Perl/Ruby"},
+            {"col1":"WAMP","col2":"Windows","col3":"Apache","col4":"MySQL","col5":"PHP"},
+            {"col1":"XAMPP","col2":"Mac/Win/Linux","col3":"Apache","col4":"MariaDB","col5":"PHP/Perl"},
+            {"col1":"WISA","col2":"Windows","col3":"IIS","col4":"SQL Server","col5":"ASP.NET"},
+            {"col1":"MEAN","col2":"N/A","col3":"MongoDB","col4":"Node","col5":"Node.js"}
+        ]
+}
