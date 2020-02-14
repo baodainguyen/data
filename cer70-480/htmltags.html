@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam Ref 70-480 Programming in html5</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">    
+  </head>  
+  <body>
+    <header>
+      <h1>Some fictional <mark>company</mark> website</h1>
+      <nav>
+        <a href="Home.html">Document Structure</a>
+        <a href="Blog.html">Writting Code</a>
+        <a href="About.html">Styles</a>
+      </nav>
+    </header>
+    <article>
+      <header>
+        <hgroup>
+          <h1>Our first new Article</h1>
+        </hgroup>
+      </header>
+      <section>
+        <h1>Section 1 Fruits and vegetables</h1>
+        <section>
+          <h1>Fruit section 2</h1>
+          <section>
+            <h1>Round Fruit section 3 (same font-size)</h1>
+          </section>
+          <section>
+            <h1>Long Fruit section 3 (same font-size)</h1>
+          </section>
+          <section>
+            <h1>Colorful section 3 (same font-size)</h1>
+          </section>
+          <p>Some detail bout section 2</p>
+        </section>
+        <section>
+          <h1>The same size about section 2</h1>
+          <p>Data download is in progress, please wait patiently:</p>
+          <progress max="5"></progress>
+        </section>     
+      </section>
+      <aside>Did you know that 7/10 is 70%</aside>
+      <section>
+        <h1>Section 2</h1>
+        <p>Our goal is to have 1000 users:</p>
+        <span>0</span><progress value="350" max="1000"></progress><span>1000</span>
+      </section>
+    </article>
+    <article>
+      <header>
+        <hgroup>
+          <h1>Second huge article</h1>
+        </hgroup>
+      </header>
+      <p>Provide some useful <mark>information</mark> in the article</p>
+    </article>
+    <article>
+      <header>
+        <hgroup>
+          <h1>Third huge article</h1>
+        </hgroup>
+      </header>
+      <p>Provide some useful information in the third article</p>
+      <figure>
+        <img src="https://freshpointlocal.co.uk/wp-content/uploads/2018/12/Oranges.jpg" style="width: 80px; height: 63px;" />
+        <figcaption>Fig1: A really juice organge.</figcaption>
+      </figure>
+    </article>
+    
+    <script src="/script.js"></script>
+    <script>
+      window.onload = function() {
+        var section = document.querySelectorAll("section"); 
+        var p = section[2].querySelectorAll("h1");
+        console.log(section.length, section[2], p[0]);
+      };
+    </script>
+  </body>
+</html>

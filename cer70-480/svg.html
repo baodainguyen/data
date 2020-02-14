@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam Ref 70-480 Programming in html5</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <svg height="200">
+      <rect id="lightStandard" x="100" y="10" width="60" height="200" fill="black"/>
+      <circle id="redLight" cx="129" cy="50" r="25" fill="red" onmouseover="circleHoverIn(evt, 'red')" onmouseout="circleHoverOut(evt, 'red')"/>
+      <circle id="amberLight" cx="129" cy="110" r="25" fill="yellow" onmouseover="circleHoverIn(evt, 'yellow')" onmouseout="circleHoverOut(evt, 'yellow')"/>
+      <circle id="greenLight" cx="129" cy="170" r="25" fill="green" onmouseover="circleHoverIn(evt, 'green')" onmouseout="circleHoverOut(evt, 'green')"/>
+    </svg>
+    <svg height="220">
+      <polygon points="10,15 30,35 10,85 100,85 70,35 100,15" fill="purple"/>
+      <polyline points="10,150 30,170 50,132 62,196 78,165 96,170" style="stroke:orange; fill:none; stroke-width: 5;"/>
+      <line x1="150" y1="100" x2="150" y2="150" style="stroke:blue; stroke-width: 3" />
+      <ellipse cx="250" cy="150" rx="30" ry="55" fill="green"/>
+      <text x="0" y="10" style="stroke: black; stroke-width: 1;">
+        Examples of SVG shapes and text
+      </text>
+    </svg>
+    <svg height="300" width="505" id="game">
+      <rect class="wall" x="0" y="80" width="5" height="200" fill="black"/>
+      <rect class="wall" x="500" y="80" width="5" height="200" fill="black"/>
+      <circle id="ball" cx="129" cy="180" r="25" fill="red" onclick="onTouchBall(evt)"/>
+    </svg>
+    
+    <script src="/script.js"></script>
+    <script>
+      window.onload = function() {
+        var ball = document.getElementById('ball');
+        
+        
+      };
+      
+      function circleHoverIn(e, strColor) {
+        document.getElementById('redLight').setAttribute('style', 'fill: black');
+        document.getElementById('amberLight').setAttribute('style', 'fill: black');
+        document.getElementById('greenLight').setAttribute('style', 'fill: black');
+        var circle = e.target;
+        circle.setAttribute('style', 'fill: ' + strColor);
+      }
+      function circleHoverOut(e, strColor){
+        document.getElementById('redLight').setAttribute('style', 'fill: red');
+        document.getElementById('amberLight').setAttribute('style', 'fill: yellow');
+        document.getElementById('greenLight').setAttribute('style', 'fill: green');        
+      }
+      function onTouchBall(e){
+        var circle = e.target,
+            game = document.getElementById('game').appendChild(circle.cloneNode(true));
+        
+        game.setAttribute("cx", parseInt(circle.getAttribute('cx')) + parseInt(Math.random() * 10) + 50); 
+        game.setAttribute("cy", parseInt(circle.getAttribute('cy')) + parseInt(Math.random() * 10) + 50); 
+        
+        game.setAttribute("r", 25); game.setAttribute("fill", 'red');
+        
+      }
+      
+    </script>
+  </body>
+</html>

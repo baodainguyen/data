@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam Ref 70-480 Programming in html5</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <article>
+      <section>
+        <video controls poster="https://i.ytimg.com/vi/aqz-KE-bpKQ/maxresdefault.jpg" width="500">
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="audio/mp4"/>
+          <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg"/>
+          <object>
+            <p>Video is not supported by this browser</p>
+          </object>
+        </video>
+        <audio controls id="89_audio">
+          <source src="https://www.w3schools.com/html/horse.ogg" type="audio/ogg" />
+          <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+          <p>Your browser does not support the audio element.</p>
+        </audio>
+      </section>
+      <section>
+        <canvas id="89_drawing" width="490" height="300">
+          Your browser does not support HTML5
+        </canvas>
+      </section>
+    </article>
+    
+    <script src="/script.js"></script>
+    <script>
+      window.onload = function() {
+        document.getElementById('89_audio').volume = 0.1;
+        
+        var ctx = document.getElementById("89_drawing").getContext("2d");
+        //ctx.beginPath();
+        ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+        ctx.lineWidth = 5; ctx.strokeStyle = '#ff4848'
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(160, 10); ctx.lineTo(220, 90); 
+        ctx.lineTo(270, 10); ctx.lineTo(320, 90); ctx.lineTo(370, 10); ctx.lineTo(420, 10);
+        ctx.lineWidth = 2; ctx.strokeStyle = '#0f0';
+        ctx.stroke(); 
+        
+        ctx.beginPath();
+        ctx.arc(125, 150, 40, 1.5 * Math.PI, 0, false); // == (125, 150, 40, 1.5 * Math.PI, 2 * Math.PI, false);
+        ctx.strokeStyle = 'cyan'
+        ctx.stroke(); 
+        
+        ctx.beginPath();
+        ctx.arc(125, 150, 40, 1.5 * Math.PI, 2 * Math.PI, true);
+        ctx.strokeStyle = '#ff4848'
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(200, 150); ctx.quadraticCurveTo(270, -60, 360, 190);
+        ctx.lineWidth = 2; ctx.strokeStyle = 'blue';
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.moveTo(200, 150); ctx.bezierCurveTo(500, 200, 100, 250, 300, 298);
+        ctx.lineWidth = 2; ctx.strokeStyle = 'orange';
+        ctx.stroke();
+        
+        let x = 70, y = 260, r = 35;
+        ctx.beginPath();
+        ctx.arc(x, y, r, 1.75 * Math.PI, 1.25 * Math.PI, false);
+        ctx.lineTo(x - r - 30, y - r);
+        ctx.quadraticCurveTo(x, y - 100, x + r + 30, y - r);
+        ctx.lineTo(x + 26, y - 26);
+        
+        ctx.strokeStyle = 'black'; ctx.lineCap = 'round'; ctx.lineWidth = 3;
+        
+        ctx.fillStyle = 'yellow'; ctx.fill();
+        ctx.stroke();
+        
+        ctx.beginPath();
+        ctx.rect(350, 220, 100, 60); ctx.lineWidth = 1;
+        ctx.fillStyle = '#0f0'; ctx.fillRect(350, 220, 100, 60);
+        ctx.stroke();
+        
+      };
+      
+    </script>
+  </body>
+</html>

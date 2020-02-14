@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam Ref 70-480 Programming in html5</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      .answer {display: block;}
+      .answered, .not-answer {display: none;}
+    </style>
+  </head>
+  <body>
+    <header>A dynamic Questionnaire</header>
+    <article>
+      <hgroup>
+        <h1>Questionnaire</h1>
+        <h2>Answer the questions in order as they appear.</h2>
+      </hgroup>
+      <section>
+        <div id="Question1" class="answer">Question 1
+          <form>
+            <input type="radio" name="selection" value="true" onclick="answer(this, 1)"> True<br>
+            <input type="radio" name="selection" value="false" onclick="answer(this, 1)"> False<br>
+          </form>
+        </div>
+        <div id="Question2" class="not-answer">Question 2
+          <form>
+            <input type="radio" name="selection" value="true" onclick="answer(this, 2)"> Right<br>
+            <input type="radio" name="selection" value="false" onclick="answer(this, 2)"> Wrong<br>
+          </form>
+        </div>
+        <div id="Question3" class="not-answer">Question 3
+          <form>
+            <input type="radio" name="selection" value="true" onclick="answer(this, 3)"> True<br>
+            <input type="radio" name="selection" value="false" onclick="answer(this, 3)"> False<br>
+          </form>
+        </div>
+        <div id="Question4" class="not-answer">Question 4
+          <form>
+            <input type="radio" name="selection" value="true" onclick="answer(this, 4)"> Right<br>
+            <input type="radio" name="selection" value="false" onclick="answer(this, 4)"> Wrong<br>
+          </form>
+        </div>
+        <div id="Question5" class="not-answer">Question 5
+          <form>
+            <input type="radio" name="selection" value="true" onclick="answer(this, 5)"> Yes<br>
+            <input type="radio" name="selection" value="false" onclick="answer(this, 5)"> No<br>
+          </form>
+        </div>
+        <div id="Question6" class="not-answer">Question 6
+          <form>
+            <input type="radio" name="selection" value="true" onclick="answer(this, 6)"> True<br>
+            <input type="radio" name="selection" value="false" onclick="answer(this, 6)"> False<br>
+          </form>
+        </div>
+        <div id="Question7" class="not-answer">Question 7
+          <form>
+            <input type="radio" name="selection" value="true" onclick="answer(this, 7)"> Yes<br>
+            <input type="radio" name="selection" value="false" onclick="answer(this, 7)"> No<br>
+          </form>
+        </div>
+        <div id="Question8" class="not-answer">Question 8
+          <form>
+            <input type="radio" name="selection" value="true" onclick="answer(this, 8)"> Right<br>
+            <input type="radio" name="selection" value="false" onclick="answer(this, 8)"> Wrong<br>
+          </form>
+        </div>
+        <div id="Question9" class="not-answer">Question 9
+          <form>
+            <input type="radio" name="selection" value="true" onclick="answer(this, 9)"> Yes<br>
+            <input type="radio" name="selection" value="false" onclick="answer(this, 9)"> No<br>
+          </form>
+        </div>
+        <div id="Question10" class="not-answer">Question 10
+          <form>
+            <input type="radio" name="selection" value="true" onclick="answer(this, 10)"> True<br>
+            <input type="radio" name="selection" value="false" onclick="answer(this, 10)"> False<br>
+          </form>
+        </div>
+      </section>
+    </article>
+    
+    <script src="/script.js"></script>
+    <script>
+      window.onload = function() {
+        
+        
+      };
+      
+      function answer(el, numb){
+        console.log(el.value == 'true', Number(numb));
+        var numId = nextQuestion(Number(numb), el.value == 'true'),
+            quesNum= document.getElementById('Question' + numId);
+        
+        numId = document.getElementById('Question' + numb);
+        numId.classList.add('answered');
+        
+        quesNum.classList.add('answer');
+        quesNum.classList.remove('not-answer');
+        
+        function nextQuestion(num, isTrue){
+          switch(num){
+            case 1: return isTrue ? 2 : 3;
+              
+            case 2: return isTrue ? 4 : 5;
+              
+            case 3: return 6;
+              
+            case 4:
+            case 5:
+              return 10;
+              
+            case 6: return isTrue ? 7 : 8;
+              
+            case 7:
+            case 8: 
+              return 9;
+              
+            default: return 10;
+              
+          }
+        }
+      }
+      
+    </script>
+  </body>
+</html>

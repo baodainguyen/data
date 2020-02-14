@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      section { margin-top: 15px; }
+      #storageTable {border-collapse: collapse; margin-top: 18px}
+      #storageTable td {border: 1px solid grey; padding: 5px; }
+    </style>
+  </head>
+  <body>
+    <section>
+      Key:
+      <input type="text" id="toStorageKey" />
+      Value:
+      <input type="text" id="toStorageValue" />
+    </section>
+    <br />
+    <section>
+      <button type="button" id="btnAdd">Add To Storage</button>
+      <button type="button" id="btnRemove">Remove from Storage</button>
+      <button type="button" id="btnClear">Clear Storage</button>
+    </section>
+    <div id="storage">
+      <p>Current Storage Contents</p>
+    </div>
+
+    <script src="/script.js"></script>
+    <script>
+      window.onload = function() {
+        
+        function LoadFromStorage () {
+          var storageDiv = document.getElementById("storage");
+          var tbl = document.createElement("table");
+          tbl.id = "storageTable";
+          
+          function getRow () {
+            if(arguments.length < 1) return;
+            
+            let _row = document.createElement("tr");
+            
+            for (let i = 0; i < arguments.length; i++) {
+              let _td = document.createElement("td");
+              _td.innerText = arguments[i];
+              _row.appendChild(_td);
+            }
+            return _row;
+          };
+                    
+          if (localStorage.length > 0) {
+            tbl.appendChild(getRow('Key', 'Value'));
+            
+            for (var i = 0; i < localStorage.length; i++) {
+              let _key = localStorage.key(i),
+                  _val = localStorage.getItem(_key);
+              
+              tbl.appendChild(getRow(_key.toString(), _val.toString()));
+            }
+          } else {
+            tbl.appendChild(getRow("No data in local storage."));
+          }
+          let stTbl = document.getElementById("storage");
+          if (stTbl) {
+            while (stTbl.firstChild) {
+               stTbl.removeChild(stTbl.firstChild);
+            }            
+            stTbl.appendChild(tbl);
+          } else {
+            storageDiv.appendChild(tbl);
+          }
+        }; 
+        
+        LoadFromStorage();
+        
+        document.getElementById("btnAdd").onclick = function() {
+          localStorage.setItem(
+            document.getElementById('toStorageKey').value.toString(),
+            document.getElementById('toStorageValue').value.toString()
+          );
+          LoadFromStorage();
+        };
+        document.getElementById("btnRemove").onclick = function() {
+          localStorage.removeItem(document.getElementById('toStorageKey').value.toString());
+          LoadFromStorage();       
+        };
+        document.getElementById("btnClear").onclick = function() {
+          localStorage.clear();
+          LoadFromStorage();
+        };        
+      };
+    </script>
+  </body>
+</html>
