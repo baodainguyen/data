@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam Ref 70-480 Programming in html5</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      #outer  { width: 200px; height: 200px; background-color: red; }
+      #middle { width: 50%; height: 50%; position: relative; top: 25%; left: 25%; background-color: green; }
+      #inner  { width: 50%; height: 50%; position: relative; top: 25%; left: 25%; background-color: blue; } 
+      #yellowBox  { width: 200px; height: 200px; background-color: yellow; }
+    </style>
+  </head>
+  <body id="bod">
+    <div id="yellowBox"> </div>
+    <p id="output"> export!! </p>
+    
+    <input id="aRange" type="range" max="200" min="0" value="0"/>
+    <input id="aText" type="text"/>
+    <div id="rangeValue">0</div>
+    
+    <input id="firstNameText" type="text"/>
+    <input id="lastNameText" type="text"/>
+    <span id="outputText">Output code</span>
+    <span id="ruleViolation"></span>
+    
+    <div id="outer">
+      <div id="middle">
+        <div id="inner"></div>
+      </div>
+    </div>
+    <ol id="eventOrder"> </ol>
+    <button type="button" id="clearButton">Clear List</button>
+    
+    <script src="/script.js"></script>
+    <script>
+      document.onkeydown = function () {
+        if (window.event.ctrlKey && String.fromCharCode(window.event.keyCode) == 'F')
+          document.getElementById("firstNameText").focus();
+        if (window.event.ctrlKey && String.fromCharCode(window.event.keyCode) == 'L')
+          document.getElementById("lastNameText").focus(); 
+        return false;
+      }
+      
+      window.onload = function () {
+        function yellowBoxClick() {
+          let output = ("Client X: " + window.event.clientX + " ClientY: " + window.event.clientY);
+          output += '\n';
+          output += ("offsetX: " + window.event.offsetX + " offsetY: " + window.event.offsetY);
+          output += '\n';
+          output += ("screen X: " + window.event.screenX + " screenY: " + window.event.screenY);
+
+          document.getElementById("output").innerText = output;
+        }
+        document.getElementById("yellowBox").addEventListener("click", yellowBoxClick);
+        
+        
+        document.getElementById("firstNameText").focus();
+        document.getElementById("firstNameText").addEventListener(
+          "blur",
+          function () {
+            if (this.value.length < 5) {
+              document.getElementById("ruleViolation").innerText = 'First Name is required to be 5 letters.';
+              document.getElementById("ruleViolation").style.color = 'red';
+              this.focus();
+            } else {
+              document.getElementById("ruleViolation").innerText = 'grreat!!';
+              document.getElementById("ruleViolation").style.color = 'green';
+            }
+        });
+        document.getElementById("firstNameText").addEventListener(
+          "keydown", 
+          function () { 
+            document.getElementById("ruleViolation").innerText = window.event.keyCode;
+        });
+        document.getElementById("firstNameText").addEventListener(
+          'keyup', 
+          function(){ document.getElementById("outputText").innerText = this.value.length; }
+        );
+        
+        function rangeChangeEvent() { document.getElementById("rangeValue").innerText = this.value; }
+        document.getElementById("aRange").addEventListener("change", rangeChangeEvent);
+        document.getElementById("aText").addEventListener("change", rangeChangeEvent);
+        
+        
+        function outerDivClick() { appendText("outer Div Clicked"); }
+        function middleDivClick() { appendText("middle Div Clicked"); }
+        function innerDivClick() { appendText("inner Div Clicked"); window.event.cancelBubble = true; }
+        document.getElementById("inner").addEventListener("click", innerDivClick, false); 
+        document.getElementById("middle").addEventListener("click", middleDivClick, false); 
+        document.getElementById("outer").addEventListener("click", outerDivClick, false); 
+        
+        function clearList() {
+          var ol = document.createElement("ol");
+          ol.id = "eventOrder"; 
+          document.getElementById("bod").replaceChild(ol, document. getElementById("eventOrder"));
+        }
+        document.getElementById("clearButton").addEventListener("click", clearList);
+      }
+      
+      function appendText(s) {
+        var li = document.createElement("li");
+        li.innerText = s; 
+        document.getElementById("eventOrder").appendChild(li);
+      }
+      
+
+      
+    </script>
+  </body>
+</html>

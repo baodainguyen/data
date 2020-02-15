@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam Ref 70-480 Programming in html5</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <form>
+      <div>
+        <hgroup>
+          <h1>Customer Satisfaction is #1</h1>
+          <h2>Please take the time to fill out the following survey</h2>
+        </hgroup>
+      </div>
+      <table>
+        <tr>
+          <td>Your Secret Code:</td> 
+          <td>
+            <input type="text" readonly value="00XY998BB" />
+            <input type="text" pattern="^[A-Z,a-z]\d[A-Z,a-z][\s{1}]?\d[A-Z,a-z]\d" title="A1A 1A1"/>
+          </td>
+        </tr>
+        <tr>
+          <td>Password:</td> <td><input type="password" /></td>
+        </tr>
+        <tr>
+          <td>First Name:</td> <td><input type="text" id="firstNameText" maxlength="50" /></td>
+        </tr>
+        <tr>
+          <td>Last Name:</td> <td><input type="text" id="lastNameText" /></td>
+        </tr>
+        <tr>
+          <td>Your favorite website: </td> 
+          <td>
+            <input type="url" placeholder="https://dnb.com"/>
+            <input type="text" title="Only .com and .ca are permitted." pattern="^[a-zA-Z0-9\-\.]+\.(com|ca)$"/>
+          </td>          
+        </tr>
+        <tr>
+          <td>Your age in years: </td> <td><input type="number" value="18"/></td>
+        </tr>
+        <tr>
+          <td>What colors have you colored your hair: </td>
+          <td>
+            <input type="checkbox" id="chkBrown" name="hair" checked="checked" /> Brown
+            <input type="checkbox" id="chkBlonde" name="hair" />Blonde
+            <input type="checkbox" id="chkBlack" name="hair" />Black
+            <input type="checkbox" id="chkRed" name="hair" />Red
+            <input type="checkbox" id="chkNone" name="hair" />None
+          </td>
+        </tr>
+        <tr>
+          <td>Rate your experience:</td>
+          <td>
+            <input type="radio" id="chkOne" name="experience" /> 1 - Very Poor
+            <input type="radio" id="chkTwo" name="experience" /> 2
+            <input type="radio" id="chkThree" name="experience" /> 3
+            <input type="radio" id="chkFour" name="experience" /> 4
+            <input type="radio" id="chkFive" name="experience" checked="checked" /> 5 - Very Good
+          </td>
+        </tr>
+        <tr>
+          <td>How likely would you recommend the product:</td>
+          <td>
+            <br /> <br />
+            <br /> <br />
+            <input type="range" min="1" max="25" value="10" />
+          </td>
+        </tr>
+        <tr>
+          <td>Other Comments: </td> <td><textarea id="otherCommentsText" rows="5" cols="20" spellcheck="true" ></textarea></td>
+        </tr>
+        <tr>
+          <td>Email address: </td> <td><input type="email" placeholder="me@mydomain.com" required /></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="submit" />
+            <input type="reset" />
+            <input type="button" value="Cancel" />
+          </td>
+        </tr>
+      </table>
+    </form>
+
+    <script>
+      window.onload = function() {
+        
+        
+      };
+    </script>
+  </body>
+</html>

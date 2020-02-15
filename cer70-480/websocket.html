@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam Ref 70-480 Programming in html5</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div align="center">
+      <div>70-480 Study Group Chat Forum </div> 
+      <div>
+        <textarea id="chatWindow" style="height: 500px; width: 300px"> </textarea>
+      </div>
+      <div>
+        <input type="text" id="msgSendText" style="width: 300px"/>
+      </div> 
+      <div>
+        <button id="Disconnect">Disconnect</button> 
+        <button id="Connect">Connect</button> 
+        <button id="Send">Send</button>
+      </div>
+    </div>
+    
+    <script src="/script.js"></script>
+    <script>
+      
+      window.onload = function () {
+        var wsConnection,
+            chatBox = document.getElementById("chatWindow"),
+            msgToSend = document.getElementById("msgSendText");
+        
+        document.getElementById("Disconnect").onclick = function () { wsConnection.close(); }; 
+        document.getElementById("Connect").onclick = function () {
+          wsConnection = new WebSocket('wss://studygroup.70480.com', ['soap', 'xmpp']);  //Or the use of wss for secure WebSockets. IE: wss://studygroup.70480.com //Opens the WebSocket
+          try {
+            // event handler for when the WebSocket connection is established
+            wsConnection.onopen = function () {
+              chatBox.textContent = chatBox.textContent + "System: Connection has been established"; }
+
+            //event handler for when the WebSocket encounters an error 
+            wsConnection.onerror = function (err) {
+              NewLine();
+              chatBox.value = chatBox.value + "System: Error Occurred. "; }
+
+            wsConnection.onclose = function () {
+              NewLine();
+              chatBox.value = chatBox.value + "System: Connection has been closed."; }
+
+            wsConnection.onmessage = function (msg) {
+              NewLine();
+              chatBox.value = chatBox.value + "Them: " + msg.data; }
+
+          } catch (e){
+            console.log(e);
+          }
+
+        };
+        document.getElementById("Send").onclick = function () {
+          //check the state of the connection
+          if (wsConnection.readyState == WebSocket.OPEN) {
+            wsConnection.send(msgToSend.value);         //send message to server.
+          } else return;
+          //show message in chat window.
+          NewLine();
+          chatBox.value = chatBox.value + "You: " + msgToSend.value;
+          msgToSend.value = ''; }  //clear message text box
+        
+        
+        function NewLine() {
+          chatBox.textContent = chatBox.textContent + '\r\n'; }
+        
+      }
+      
+    </script>
+  </body>
+</html>

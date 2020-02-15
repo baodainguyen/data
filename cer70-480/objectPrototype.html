@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div id="aDiv">
+      aDiv Id
+    </div>
+    
+
+    <script src="/script.js"></script>
+    <script>
+      function Book() {
+        this.ISBN = "55555555";
+        this.Length = 560;
+        this.genre= "programming";
+        this.covering = "soft";
+        this.author = new Author();
+        this.currentPage = 5;
+      }
+      Book.prototype = {
+        flipTo: function FlipToAPage(pNum) {
+          this.currentPage = pNum; 
+        },
+        turnPageForward: function turnForward() { 
+          this.flipTo(this.currentPage++);
+        },
+        turnPageBackward: function turnBackward() {
+          this.flipTo(this.currentPage--); 
+        }
+      };
+      
+      function Author(){ };
+      Author.prototype = {
+       firstName: 'firstName',
+       lastName: 'lastName',
+       gender: 'gender'
+      };
+      Object.assign(
+        Author.prototype,
+        { 
+          fullName: function(){
+            return this.firstName + this.lastName;
+          },
+          BookCount: 0
+        }
+      );
+      
+      function PopUpBook() {
+       Book.call(this);
+      };
+      // Do not use PopUpBook.prototype = Book.prototype
+      Object.assign(
+        PopUpBook.prototype, 
+        Book.prototype,
+        {
+          hasSound: false,
+          showPopUp: function ShowPop() { }
+        }
+      );
+      
+      console.log(new Book(), new Author(), new PopUpBook());
+      
+    </script>
+  </body>
+</html>

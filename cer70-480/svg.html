@@ -10,9 +10,9 @@
   <body>
     <svg height="200">
       <rect id="lightStandard" x="100" y="10" width="60" height="200" fill="black"/>
-      <circle id="redLight" cx="129" cy="50" r="25" fill="red" onmouseover="circleHoverIn(evt, 'red')" onmouseout="circleHoverOut(evt, 'red')"/>
-      <circle id="amberLight" cx="129" cy="110" r="25" fill="yellow" onmouseover="circleHoverIn(evt, 'yellow')" onmouseout="circleHoverOut(evt, 'yellow')"/>
-      <circle id="greenLight" cx="129" cy="170" r="25" fill="green" onmouseover="circleHoverIn(evt, 'green')" onmouseout="circleHoverOut(evt, 'green')"/>
+      <circle id="redLight" cx="129" cy="50" r="25" fill="black" onmouseover="circleHoverIn(evt, 'red')" onmouseout="circleHoverOut(evt, 'red')"/>
+      <circle id="amberLight" cx="129" cy="110" r="25" fill="black" onmouseover="circleHoverIn(evt, 'yellow')" onmouseout="circleHoverOut(evt, 'yellow')"/>
+      <circle id="greenLight" cx="129" cy="170" r="25" fill="black" onmouseover="circleHoverIn(evt, 'green')" onmouseout="circleHoverOut(evt, 'green')"/>
     </svg>
     <svg height="220">
       <polygon points="10,15 30,35 10,85 100,85 70,35 100,15" fill="purple"/>
@@ -36,18 +36,29 @@
         
         
       };
-      
+      function logTrafficlight(color){
+        if(color == 'red') {
+          console.log('stop');
+        } else if (color == 'yellow') {
+          console.log('slowdown/safely stop');   
+        } else if (color == 'green') {
+          console.log('preceed');
+        }
+      };
+      function turnOffLight(){
+        document.getElementById('redLight').setAttribute('fill', 'black');
+        document.getElementById('amberLight').setAttribute('fill', 'black');
+        document.getElementById('greenLight').setAttribute('fill', 'black');
+      }
       function circleHoverIn(e, strColor) {
-        document.getElementById('redLight').setAttribute('style', 'fill: black');
-        document.getElementById('amberLight').setAttribute('style', 'fill: black');
-        document.getElementById('greenLight').setAttribute('style', 'fill: black');
+        turnOffLight()
         var circle = e.target;
-        circle.setAttribute('style', 'fill: ' + strColor);
+        circle.setAttribute('fill', strColor);
+        logTrafficlight(strColor);
       }
       function circleHoverOut(e, strColor){
-        document.getElementById('redLight').setAttribute('style', 'fill: red');
-        document.getElementById('amberLight').setAttribute('style', 'fill: yellow');
-        document.getElementById('greenLight').setAttribute('style', 'fill: green');        
+        turnOffLight();
+        logTrafficlight('black');
       }
       function onTouchBall(e){
         var circle = e.target,
