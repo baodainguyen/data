@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam Ref 70-480 Programming in html5</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    
+    <input type="text" id="regExString" />
+    <button onclick="CheckString();" >Evaluate</button>
+    <button onclick="CheckStringExec();">Evaluate with Exec</button>
+
+    <script>
+      function CheckStringExec() {
+        var s = document.getElementById('regExString').value,
+            regExpression = /^[A-Z,a-z]\d[A-Z,a-z][\s{1}]?\d[A-Z,a-z]\d/,
+            results = regExpression.exec(s);
+        if(results != null)
+          console.log('Valid postal code. ' + results[0], results); 
+        else
+          console.log('Invalid postal code.');
+      };
+      
+      function CheckString(){
+        try {
+          var s = document.getElementById('regExString').value,
+              regExpression = /^[A-Z,a-z]\d[A-Z,a-z][\s{1}]?\d[A-Z,a-z]\d/;
+          if (regExpression.test(s)) {
+            console.log('Valid postal code.');
+          } else {
+            console.log('Invalid postal code.');
+          }
+        } catch (e) {
+          console.log('catch' + e.message);
+        }
+      }
+      window.onload = function() {
+        
+      };
+    </script>
+  </body>
+</html>

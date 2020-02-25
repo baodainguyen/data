@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam Ref 70-480 Programming in html5</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <style>
+     img.flower { 
+         float: left;
+         height: 50px; width: 50px;
+      }
+      img.orange {
+          float: right;
+          height: 50px; width: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <p style="width: 250px; margin-left: 10px;">
+Lorem ipsum dolor sit amet,<img class="flower" src="https://assets.eflorist.com/site/75411600/assets/products/PHR_/sku6710412.jpg"/> consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim<img class="orange" src="https://i.redd.it/ddg6fzn7n0c21.jpg"/> ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio...</p>
+
+    <div id="flexbox1" class="flexbox"> 
+      <div>1</div> <div>2</div> <div>3</div>
+    </div>
+    <div id="flexbox2" class="flexbox"> 
+      <div>1</div> <div>2</div> <div>3</div>
+    </div>
+    <div id="flexbox3" class="flexbox"> 
+      <div>1</div> <div>2</div> <div>3</div>
+    </div>
+    <br/><br/>
+    <div id="mainGrid"> 
+     <div>1</div>
+     <div>2</div>
+     <div>3</div>
+     <div>4</div>
+     <div>5</div>
+     <div>6</div>
+     <div>7</div>
+     <div>8</div>
+    </div>
+    <br/><br/>
+    <div id="blogPage">
+      <header>My Blog Header</header>
+      <article>My Blog's Main Body</article> 
+      <footer>My Blog Footer</footer>
+      <aside id="calendar">A calendar</aside>
+      <aside id="blogRoll">My favorite blogs</aside> 
+      <aside id="aboutMe">Who am I?</aside>
+      <aside id="bloghistory">My blog history</aside>
+    </div>
+    
+    <style>
+      .flexbox { display: flex; flex-wrap: wrap;
+        border: 1px solid black; margin-top: 100px; min-height: 15px; }
+      .flexbox > div { color: white; text-align: center;
+        min-width: 50px; min-height: 50px; border: 1px solid black; margin: 5px;
+      }
+      .flexbox > div:nth-child(1) { background-color: green;}
+      .flexbox > div:nth-child(2) { background-color: yellow; color:black}
+      .flexbox > div:nth-child(3) { background-color: red;}
+      
+      #flexbox1 {justify-content: flex-end;}
+      #flexbox2 {flex-direction: row-reverse}
+      
+      #flexbox3 > div:nth-child(1) { flex: 2 }
+      #flexbox3 > div:nth-child(2) { flex: 15 }
+      #flexbox3 > div:nth-child(3) { flex: 3}
+    
+      #mainGrid { display: grid; grid-columns: 200px 150px 50px 100px; grid-rows: 75px 95px; text-align: center;}
+      #mainGrid > div:nth-child(1){ grid-column: 1; grid-row:1; background-color: blue; color:white;}
+      #mainGrid > div:nth-child(2){ grid-column: 2; grid-row:1; background-color: aqua; }
+      #mainGrid > div:nth-child(3){ grid-column: 3; grid-row:1; background-color: red; }
+      #mainGrid > div:nth-child(4){ grid-column: 4; grid-row:1; background-color: green; color:white}
+      #mainGrid > div:nth-child(5){ grid-column: 1; grid-row:2; background-color: magenta; }
+      #mainGrid > div:nth-child(6){ grid-column: 2; grid-row:2; background-color: yellow; }
+      #mainGrid > div:nth-child(7){ grid-column: 3; grid-row:2; background-color: orange; }
+      #mainGrid > div:nth-child(8){ grid-column: 4; grid-row:2; background-color: olive; color:white}
+      
+      #blogPage {
+        display: grid;
+        columns: 15% 1fr 25%; grid-rows: 20% 20% 20% 20% 20%; 
+        width: 90%; height: 95%;
+        border: 1px dotted black; margin: auto;
+      }
+      #blogPage > header {
+        grid-column: 1; grid-column-span: 3; grid-row: 1;
+        border: 1px dotted black;
+      }
+      #blogPage > footer {
+        grid-column: 1; grid-row: 5; grid-column-span: 3; 
+        border: 1px dotted black;
+      }
+      #blogPage > article {
+        grid-column: 2; grid-row: 2; grid-row-span: 3;
+        border: 1px dotted black;
+       }
+       #blogPage > #calendar {
+        grid-column: 3; grid-row: 3;
+        border: 1px dotted black;
+       }
+       #blogPage > #blogRoll {
+        grid-column: 3; grid-row: 4;
+        border: 1px dotted black;
+       }
+       #blogPage > #aboutMe {
+        grid-column: 1; grid-row: 2; grid-row-span: 3;
+        border: 1px dotted black;
+      }
+      #blogPage > #bloghistory { 
+        grid-column: 3; grid-row: 2;
+        border: 1px dotted black;
+      }
+    </style>
+  </body>
+</html>

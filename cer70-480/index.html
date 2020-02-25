@@ -6,40 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/style.css" />
-  </head>
-  <body>
     
-    <input type="text" id="regExString" />
-    <button onclick="CheckString();" >Evaluate</button>
-    <button onclick="CheckStringExec();">Evaluate with Exec</button>
-
-    <script>
-      function CheckStringExec() {
-        var s = document.getElementById('regExString').value,
-            regExpression = /^[A-Z,a-z]\d[A-Z,a-z][\s{1}]?\d[A-Z,a-z]\d/,
-            results = regExpression.exec(s);
-        if(results != null)
-          console.log('Valid postal code. ' + results[0], results); 
-        else
-          console.log('Invalid postal code.');
-      };
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/script.js"></script>
+    
+    <style>
+      div {background-color: lightgrey; min-height: 100px}
+      #inner {left:15px; top:15px; background-color: grey; position: relative; min-height: 50px;}
+      div .dnb:first-of-type {color:red}
       
-      function CheckString(){
-        try {
-          var s = document.getElementById('regExString').value,
-              regExpression = /^[A-Z,a-z]\d[A-Z,a-z][\s{1}]?\d[A-Z,a-z]\d/;
-          if (regExpression.test(s)) {
-            console.log('Valid postal code.');
-          } else {
-            console.log('Invalid postal code.');
-          }
-        } catch (e) {
-          console.log('catch' + e.message);
-        }
-      }
-      window.onload = function() {
+      [href^="ml"] {color:yellow;}
+      [href$="ml"] {color:red}
+      [class*="nav"] a {background-color:aqua}
+      [class~="nav"] a {background-color:fuchsia}
+      
+      #navlist::first-line {background-color:yellow}
+    </style>
+  </head>
+  <body>    
+   <div id="outer" style="position:relative;">
+      <div id="inner">
+        <p class="dnb"> Hello </p>
+        <p class="dnb"> Hello 2</p>
+        <span class="dnb">this span</span>
+        <span class="dnb">this span 2</span>
+        <span class="dnb">this span 3</span>
+      </div>
+     <ul>
+       <li class="dnb">1</li>
+       <li class="dnb">1.1</li>
+     </ul>
+    </div>
+    
+    <nav id="mainmenu" class="page-nav">
+      <div id="navlist" class="container">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+      </div>
+    </nav>
+    
+    <span style="background-color:red;width:150%">Text1</span>
+    <div style="background-color:blue;width:50%">Text2</div>
+    
+    <script>
+      
+      $(document).ready(function(){
         
-      };
+      });
     </script>
   </body>
 </html>
