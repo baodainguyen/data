@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exam Ref 70-480 Programming in html5</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/style.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/script.js"></script>
+    
+    <style>
+      div {background-color: lightgrey; min-height: 100px}
+      #inner {left:15px; top:15px; background-color: grey; position: relative; min-height: 50px;}
+      div .dnb:first-of-type {color:red}
+      
+      [href^="ml"] {color:yellow;}
+      [href$="ml"] {color:red}
+      [class*="nav"] a {background-color:aqua}
+      [class~="nav"] a {background-color:fuchsia}
+      
+      #navlist::first-line {background-color:yellow}
+    </style>
+  </head>
+  <body>    
+   <div id="outer" style="position:relative;">
+      <div id="inner">
+        <p class="dnb"> Hello </p>
+        <p class="dnb"> Hello 2</p>
+        <span class="dnb">this span</span>
+        <span class="dnb">this span 2</span>
+        <span class="dnb">this span 3</span>
+      </div>
+     <ul>
+       <li class="dnb">1</li>
+       <li class="dnb">1.1</li>
+     </ul>
+    </div>
+    
+    <nav id="mainmenu" class="page-nav">
+      <div id="navlist" class="container">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+      </div>
+    </nav>
+    
+    <span style="background-color:red;width:150%">Text1</span>
+    <div style="background-color:blue;width:50%">Text2</div>
+    
+    <style>
+      table {border: 1px solid black; font-family: Arial;margin-top:30px}
+      tr:nth-child(odd) {background-color:red;}
+      tr td:nth-of-type(even) {background-color:blue;color:white}
+    </style>
+    <table>
+      <tr><th>Fuit</th><th>Quantiry</th><th>Price</th></tr>
+      <tr><td>Apples</td><td>48</td><td>$0.29</td></tr>
+      <tr><td>Bananas</td><td>72</td><td>$0.19</td></tr>
+      <tr><td>Watermelon</td><td>14</td><td>$3.99</td></tr>
+    </table>
+    
+    <style>
+      #main {width:280px;height:180px;border:1px solid black;display:flex;flex-flow:wrap-reverse}
+      #main div {flex-basis: 75px; min-height:30px;max-height:50px}
+    </style>
+    <div id="main" style="margin-top:100px">
+      <div style="background-color:aqua">A</div>
+      <div style="background-color:orange">B</div>
+      <div style="background-color:yellow">C</div>
+      <div style="background-color:pink">D</div>
+      <div style="background-color:beige">E</div>
+      <div style="background-color:violet">F</div>
+    </div>
+        
+    <script>      
+      $(document).ready(function(){
+        
+      });
+    </script>
+  </body>
+</html>
