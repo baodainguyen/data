@@ -1,5 +1,4 @@
 /*
-
 need to review: Objective 3.2: Validate user input by using JavaScript
 
 EXAM TIP
@@ -13,11 +12,12 @@ the pattern attr is supported in the IE10, Firefox, Opera, Chrome
 the pattern attr works with the following input types: text, search, url, tel, email, password
 
 === is 'strict' or 'identical' equality
+==  to test for equality
 
 http://www.daoudisamir.com/references/vs_ebooks/html5_css3.pdf
-
-
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
  
+ http://prntscr.com/r8blc4
  
 */
 
@@ -30,38 +30,35 @@ http://www.daoudisamir.com/references/vs_ebooks/html5_css3.pdf
 // http://prntscr.com/r3e8sh
 // http://prntscr.com/r3zaj7
 // http://prntscr.com/r407le
-
-// Q.134 - http://prntscr.com/r5zna8
-// Q.138 - http://prntscr.com/r5zn10
-// Q.151 - http://prntscr.com/r60795
-// Q.161 - http://prntscr.com/r60ezp
-// Q.165 - http://prntscr.com/r60kna
-// Q.167 - http://prntscr.com/r60nlu
-// Q.168 - http://prntscr.com/r60o0f
-// Q.169 - http://prntscr.com/r60oc9
-// Q.171 - http://prntscr.com/r60ov4
-// Q.175 - http://prntscr.com/r60qgn
-
-
-//       - http://prntscr.com/r6u5a3
-//       - http://prntscr.com/r75msw
-// Q.80  - http://prntscr.com/r75qru
-// Q.93  - http://prntscr.com/r767g1
-// Q.109 - http://prntscr.com/r774yu
-// Q.112 - http://prntscr.com/r776ct
-// Q.115 - http://prntscr.com/r777af
-// Q.118 - http://prntscr.com/r77au4
+// Q.10  - http://prntscr.com/r8esyi        custom Event
+// Q.138 - http://prntscr.com/r5zn10        DOMParser parse xml format string
+// Q.167 - http://prntscr.com/r60nlu        window.eval('product');
+// Q.83  - http://prntscr.com/r60ov4        using Blend
+// Q.59  - http://prntscr.com/r6u5a3        flex: 1 in display: flex
+//https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
+// Q.109 - http://prntscr.com/r774yu        transition
+// Q.115 - http://prntscr.com/r777af        ajax: url - ?username=username&pass=password
 // Q.132 - http://prntscr.com/r7b8ys        (websocket)
 // Q.155 - http://prntscr.com/r7cbuf        css: div ~ a
 // The box-sizing CSS property sets how the total width and height of an element is calculated.
 // Q.176 - http://prntscr.com/r7cwdt        parseInt('12px', 10) 
-// Q.198 - http://prntscr.com/r7du13
+// Q.198 - http://prntscr.com/r7du13        _private method
 // Q.200 - http://prntscr.com/r7dvkr        transform: rate(90deg)
 // Q.210 - http://prntscr.com/r7eb7h        ajax contentType: 'application/soap+xml', dataType: 'xml'
 // Q.211 - http://prntscr.com/r7edd3        display: flex
 // Q.212 - http://prntscr.com/r7ef1l        decodeURIComponent(str) in query string display @ symbol when using ajax
 // Q.223 - http://prntscr.com/r7exib        XMLHttpRequest;
-// Q.251 - http://prntscr.com/r7fnr5        ajax xml file
+// Q.251 - http://prntscr.com/r7fnr5        ajax xml file, SOAP request
+// Q.256 - http://prntscr.com/r7os8b        jquery first
+// Q.279 - http://prntscr.com/r7p56x        navigator.online
+// Q.294 - http://prntscr.com/r7pgri        isPrototypeOf
+// Q.303 - http://prntscr.com/r7rslk        position relative, top 5px
+// Q.307 - http://prntscr.com/r7vrgs        author, user style sheets (https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade)
+// review  isNaN and parseInt()
+// review @font-face
+// review $(':header') and $('input:first')
+// check isPrototypeOf and instanceof
+// check position (relative/absolute)
 
 
 
@@ -80,7 +77,7 @@ http://www.daoudisamir.com/references/vs_ebooks/html5_css3.pdf
 
 // Q.95  - http://prntscr.com/r76uqd
 
-// http://prntscr.com/r61cwd
+//Need to be modify:  http://prntscr.com/r61cwd
 
 
 
