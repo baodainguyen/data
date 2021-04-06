@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="608.431" height="490.516" viewBox="0 0 608.431 490.516">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}.cls-2{filter:url(#Rectangle_338)}
+        </style>
+        <linearGradient id="linear-gradient" x1=".553" x2=".396" y1="1.873" y2="-.173" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#36137c"/>
+            <stop offset=".42" stop-color="#36137c"/>
+            <stop offset="1" stop-color="#992699"/>
+        </linearGradient>
+        <filter id="Rectangle_338" width="608.431" height="490.516" x="0" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g class="cls-2">
+        <rect id="Rectangle_338-2" width="262.004" height="484.58" class="cls-1" data-name="Rectangle 338" rx="131.002" transform="rotate(67 220.202 371.453)"/>
+    </g>
+</svg>

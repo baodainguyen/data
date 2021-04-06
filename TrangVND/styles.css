@@ -1,0 +1,89 @@
+/** TYPOGRAPHY **/
+@font-face {
+  font-family: "UtmDuepuntozero";
+  src: url("./UTM Duepuntozero.ttf") format("woff"), url("./UTM Duepuntozero.ttf") format("opentype"),
+    url("./UTM Duepuntozero.ttf") format("truetype");
+}
+@font-face {
+  font-family: "UtmDuepuntozeroBold";
+  src: url("./UTM DuepuntozeroBold.ttf") format("woff"), url("./UTM DuepuntozeroBold.ttf") format("opentype"),
+    url("./UTM DuepuntozeroBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "BoosterLight";
+  src: url("./VL_BoosterNextFY-Thin.otf") format("truetype");
+}
+@font-face {
+  font-family: "BoosterBold";
+  src: url("./VL_BoosterNextFY-Black.otf") format("truetype");
+}
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.center {
+  text-align: center;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+.font-utm-duepuntozero {
+  font-family: "UtmDuepuntozero", Arial, Helvetica, sans-serif;
+}
+.font-utm-duepuntozero-bold {
+  font-family: "UtmDuepuntozeroBold", Arial, Helvetica, sans-serif;
+}
+.font-booster-bold {
+  font-family: "BoosterBold", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.font-booster-light {
+  font-family: "BoosterLight", Arial, Helvetica, sans-serif;
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/** COLORS **/
+.orange {
+  color: #ffa200;
+}
+
+.white {
+  color: #fff;
+}
+
+.gray01 {
+  color: #666;
+}
+.gray02 {
+  color: #888;
+}
+
+.purple {
+  color: #5f019d;
+}
+
+.gradient-orange {
+  background-image: linear-gradient(88deg, #f16c00, #f7b50f);
+}
+
+.gradient-purple {
+  /* background-image: linear-gradient(11deg, #36137c, #36137c 42%, #992699); */
+  background-image: linear-gradient(14deg, #36137c -72%, #36137c 24%, #992699 156%);
+}
+
+/** LAYOUT **/
+.absolute {
+  position: absolute;
+}

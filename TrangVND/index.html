@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Margin_T10</title>
+  <link rel="icon" href="img/icon.png" type="image/png">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-58HRK8H');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58HRK8H" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <main>
+    <section id="banner" class="banner-section">
+      <div class="bg-img bg-banner-img d-relative w100 h63vw d-flex">
+        <img src="img/banner-2.png" style="opacity:0" class="h63vw w100" alt="banner">
+        <img src="img/logo.png" class="absolute" alt="banner" id="banner-logo">
+        
+        <div class="absolute" id="banner-form">
+          <p class="note font-booster-light">(Không áp dụng thêm bất cứ điều kiện ràng buộc nào khác)</p>
+          <div id="demo">
+          <form>
+            <div class="form-group">
+              <label class="form-label white font-booster-light">Số tiền muốn vay:</label>
+              <input autocomplete="off" class="form-input orange font-booster-bold" type="text" id="money">
+              <span id="money-remove-btn" class="remove-btn orange absolute">&times;</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label white font-booster-light">Số ngày vay:</label>
+              <input autocomplete="off" class="form-input orange font-booster-bold" type="text" id="loanDays">
+              <span id="days-remove-btn" class="remove-btn orange absolute">&times;</span>
+            </div>
+            <div class="form-group">
+              <label class="form-label white font-booster-light">Lãi suất (%/năm):</label>
+              <span class="form-result orange font-booster-bold" id="interestRate"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label white font-booster-light">Lãi phải trả:</label><span
+                class="form-result orange font-booster-bold" id="profit"></span>
+            </div>
+          </form>
+        </div>
+          <p class="note font-booster-light note-bot">* Nhập thông tin vào “Số tiền muốn vay” và một trong 2 trường: “Số ngày vay”
+          hoặc “Lãi suất”.<br />
+          Hệ thống sẽ tự tính toán “Tiền lãi phải trả” và “Số ngày vay”/“Lãi suất” tương ứng.</p>
+
+          <a href="#features" class="d-in-block"><img src="img/arrow-2.png" alt="arrow" id="btn-scroll-features" onclick="scrollToFeature()"></a>
+        </div>
+
+        <p id="banner-txt03" class="absolute font-booster-bold">Lắp công thức - Tạo khoản vay - Gửi
+        ngay cho VNDIRECT</p>
+
+        <div class="absolute uppercase center" id="banner-hotline">
+        Gọi <span class="white">1900.5454.09 - 0961.772.660</span><br />
+        để đăng ký ngay hôm nay
+      </div>
+        
+      </div>
+    </section>
+    <section id="features">
+      <img src="img/bg01.svg" class="absolute" alt="bg01" id="features-bg01">
+      <img src="img/bg02.svg" class="absolute" alt="bg02" id="features-bg02">
+      <p class="uppercase purple font-booster-bold absolute" id="features-txt01">Điều gì tạo nên sức hấp dẫn của T10?
+      </p>
+      <div class="feature absolute" id="feature-canh-tranh">
+        <img src="img/feature_canh_tranh.svg" alt="canh_tranh" class="absolute">
+        <p class="absolute feature-title uppercase font-booster-bold white">Cạnh tranh</p>
+        <p class="absolute feature-desc font-booster-light white">Mức lãi suất thấp nhất trên thị trường</p>
+      </div>
+      <div class="feature absolute" id="feature-hieu-qua">
+        <img src="img/feature_hieu_qua.svg" alt="canh_tranh" class="absolute">
+        <p class="absolute feature-title uppercase font-booster-bold white">Hiệu quả</p>
+        <p class="absolute feature-desc font-booster-light white">Hưởng lãi 0% trong 10 ngày, phù hợp với các chiến
+          lược giao dịch nhanh</p>
+      </div>
+      <div class="feature absolute" id="feature-linh-hoat">
+        <img src="img/feature_linh_hoat.svg" alt="canh_tranh" class="absolute">
+        <p class="absolute feature-title uppercase font-booster-bold white">Linh hoạt</p>
+        <p class="absolute feature-desc font-booster-light white">Dễ dàng đăng ký hoặc chuyển đổi từ chính sách lãi suất
+          chung bất kỳ lúc nào</p>
+      </div>
+      <div id="policy" class="absolute">
+        <p class="absolute uppercase white font-booster-bold" id="policy-title">Chính sách hấp dẫn</p>
+        <table class="absolute" id="policy-table">
+          <tr class="white font-booster-light">
+            <td>Miễn lãi suất <span class="font-booster-bold">10 ngày </span>đầu</td>
+          </tr>
+          <tr class="white font-booster-light">
+            <td>
+              Từ ngày thứ 11, lãi suất bằng <span class="font-booster-bold">110%</span> mức lãi suất bình thường áp dụng
+              cho sản phẩm giao dịch ký quỹ thường tại VNDIRECT
+            </td>
+          </tr>
+          <tr class="white font-booster-light">
+            <td>Danh mục cho vay đa dạng lên đến trên <span class="font-booster-bold">200 mã cổ phiếu</span></td>
+          </tr>
+          <tr class="white font-booster-light">
+            <td>Tỷ lệ cho vay: Tối đa <span class="font-booster-bold">50%</span></td>
+          </tr>
+          <tr class="white font-booster-light">
+            <td>Kỳ hạn khoản vay: <span class="font-booster-bold">90 ngày</span></td>
+          </tr>
+          <tr class="white font-booster-light">
+            <td>Đăng ký sử dụng trên các kênh: Tổng đài, Sàn giao dịch, Nhân viên chăm sóc &amp; quản lý tài khoản</td>
+          </tr>
+        </table>
+        <img src="img/policy.svg" alt="policy" class="absolute">
+      </div>
+    </section>
+
+    <!-- <section id="demo" class="gradient-purple">
+      <p id="demo-title" class="uppercase white font-booster-bold">Minh hoạ sản phẩm T10</p>
+      <form>
+        <div class="form-group">
+          <label class="form-label white font-booster-bold">Số tiền muốn vay:</label>
+          <input autocomplete="off" class="form-input orange font-booster-bold" type="text" id="money">
+          <span id="money-remove-btn" class="remove-btn orange absolute">&times;</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label white font-booster-bold">Số ngày vay:</label>
+          <input autocomplete="off" class="form-input orange font-booster-bold" type="text" id="loanDays">
+          <span id="days-remove-btn" class="remove-btn orange absolute">&times;</span>
+        </div>
+        <div class="form-group">
+          <label class="form-label white font-booster-bold">Lãi suất (%/năm):</label>
+          <span class="form-result orange font-booster-bold" id="interestRate"></span>
+        </div>
+        <div class="form-group">
+          <label class="form-label white font-booster-bold">Lãi phải trả:</label><span
+            class="form-result orange font-booster-bold" id="profit"></span>
+        </div>
+      </form>
+      <p id="demo-note01" class="font-booster-light italic white">Nhập thông tin "Số tiền muốn vay" và "Số ngày vay".
+      </p>
+      <p id="demo-note02" class="font-booster-light italic white">Hệ thống sẽ tự tính toán "Lãi suất" và "Lãi phải trả"
+        tương ứng.</p>
+    </section> -->
+  </main>
+
+  <footer class="gradient-purple font-booster-light">
+    <img src="img/logo_VND2015-trang.png" alt="logo" id="footer-logo" height="80">
+    <p id="footer-note01" class="bold">Công ty Cổ phần Chứng khoán VNDIRECT</p>
+    <p id="footer-note02" class="center">Trụ sở chính: Số 1 Nguyễn Thượng Hiền - Hai Bà Trưng - Hà Nội
+    </p>
+    <p id="footer-note03" class="center">Chi nhánh Hồ Chí Minh: Tòa nhà THE 90th PASTEUR, số 90
+      Pasteur, Q.1, Thành phố Hồ Chí Minh</p>
+    <p id="footer-note04" class="center">Tổng đài: <span class="bold">1900 5454 09</span> |
+      Email: <span class="bold">support@vndirect.com.vn</span> | Website: <a href="https://www.vndirect.com.vn"
+        class="bold no-underline">https://www.vndirect.com.vn</a></p>
+    <p id="footer-note05" class="center">Chuyên trang hỗ trợ Khách hàng: <a href="https://support.vndirect.com.vn"
+        class="bold no-underline">https://support.vndirect.com.vn</a></p>
+  </footer>
+  <script>
+    const moneyInput = document.getElementById('money');
+    const daysInput = document.getElementById('loanDays');
+    const profitInput = document.getElementById('profit');
+    const rateInput = document.getElementById('interestRate');
+
+    const YEAR_INTEREST_RATE = 0.1485;
+
+    let state = {
+      money: 0,
+      days: 0,
+    };
+
+    function clear(stateKey, input, removeBtn) {
+      return (e) => {
+        input.value = '';
+        state[stateKey] = 0;
+        removeBtn.style.display = 'none';
+        recalculate();
+      }
+    }
+
+    function scrollToFeature() {
+      let h = document.getElementById('banner-img').clientHeight;
+      window.scroll({ top: h });
+    }
+
+    function addCommas(num, showDecimal) {
+      let numStr = num.toLocaleString();
+      if (showDecimal) {
+        return numStr;
+      }
+      let decimalIndex = numStr.indexOf('.');
+      if (decimalIndex > -1) {
+        return numStr.substring(0, decimalIndex);
+      }
+      return numStr
+    }
+
+    function getInterestRate() {
+      let days = state.days;
+      if (money == 0 || days <= 10) return '';
+      return YEAR_INTEREST_RATE * (days - 10) / days;
+    }
+
+    function getProfit() {
+      let money = state.money, days = state.days;
+      if (money == 0 || days == 0) return '';
+      let interestRate = getInterestRate();
+      return money * interestRate * days / 360;
+    }
+
+    function recalculate() {
+      profitInput.innerHTML = addCommas(getProfit(), false);
+      rateInput.innerHTML = (getInterestRate() * 100).toFixed(2) + '%';
+      moneyInput.value = addCommas(state.money, true);
+    }
+
+    moneyInput.addEventListener('keyup', (e) => {
+      let newValue = e.target.value.split('').filter(c => c !== ',').join('');
+      state.money = newValue * 1;
+      let removeBtn = document.getElementById('money-remove-btn');
+      removeBtn.style.display = 'block';
+      removeBtn.addEventListener('click', clear('money', moneyInput, removeBtn));
+      recalculate();
+    });
+
+    daysInput.addEventListener('keyup', (e) => {
+      state.days = e.target.value * 1;
+      let removeBtn = document.getElementById('days-remove-btn');
+      removeBtn.style.display = 'block';
+      removeBtn.addEventListener('click', clear('days', daysInput, removeBtn));
+      recalculate();
+    });
+
+  </script>
+</body>
+
+</html>

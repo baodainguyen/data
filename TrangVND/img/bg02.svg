@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="2499.801" height="1418.501" viewBox="0 0 2499.801 1418.501">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}.cls-2{fill:url(#linear-gradient-2)}.cls-3{fill:url(#linear-gradient-3)}.cls-4{fill:url(#linear-gradient-4)}.cls-5{fill:url(#linear-gradient-5)}.cls-6{filter:url(#Rectangle_359)}.cls-7{filter:url(#Rectangle_350)}.cls-8{filter:url(#Rectangle_355)}.cls-9{filter:url(#Path_215)}.cls-10{filter:url(#Rectangle_346)}.cls-11{filter:url(#Rectangle_362)}.cls-12{filter:url(#Rectangle_347)}
+        </style>
+        <linearGradient id="linear-gradient" x1=".553" x2=".509" y1="1.873" y2=".403" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#ff5900"/>
+            <stop offset="1" stop-color="#ffc811"/>
+        </linearGradient>
+        <filter id="Rectangle_347" width="2138.868" height="1158.257" x="0" y="201.252" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <linearGradient id="linear-gradient-2" x1=".553" x2=".621" y1="1.873" y2=".767" xlink:href="#linear-gradient"/>
+        <filter id="Rectangle_362" width="1229.354" height="677.86" x="334" y="632.191" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-2" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <linearGradient id="linear-gradient-3" x1=".553" x2=".52" y1="1.873" y2="-.1" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#ff5900"/>
+            <stop offset="1" stop-color="#ffc400"/>
+        </linearGradient>
+        <filter id="Rectangle_346" width="2128.614" height="1390.11" x="371.187" y="28.392" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-3" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-3" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <linearGradient id="linear-gradient-4" x1=".773" x2=".509" y1="2.242" y2=".403" xlink:href="#linear-gradient"/>
+        <filter id="Path_215" width="908.626" height="436.068" x="1019" y="229.965" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-4" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-4" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <linearGradient id="linear-gradient-5" x1=".568" x2=".341" y1="1.617" y2=".002" xlink:href="#linear-gradient"/>
+        <filter id="Rectangle_355" width="731.348" height="416.662" x="1272" y="289.389" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-5" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-5" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Rectangle_350" width="547.247" height="338.516" x="1470.754" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-6" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-6" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Rectangle_359" width="442.779" height="279.079" x="1522.61" y="770.41" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-7" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-7" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Group_192" data-name="Group 192">
+        <g class="cls-12" transform="translate(0 .001)">
+            <rect id="Rectangle_347-2" width="286" height="2137" class="cls-1" data-name="Rectangle 347" rx="143" transform="rotate(67 829.72 1620.643)"/>
+        </g>
+        <g class="cls-11" transform="translate(0 .001)">
+            <rect id="Rectangle_362-2" width="161" height="1202" class="cls-2" data-name="Rectangle 362" rx="80.5" transform="rotate(67 240.69 1438.728)"/>
+        </g>
+        <g class="cls-10" transform="translate(0 .001)">
+            <rect id="Rectangle_346-2" width="599" height="1993" class="cls-3" data-name="Rectangle 346" rx="299.5" transform="rotate(67 1079.695 1714.278)"/>
+        </g>
+        <g class="cls-9" transform="translate(0 .001)">
+            <path id="Path_215-2" d="M10.5 0A10.5 10.5 0 0 1 21 10.5v892a10.5 10.5 0 0 1-21 0v-892A10.5 10.5 0 0 1 10.5 0z" class="cls-4" data-name="Path 215" transform="rotate(67 754.119 1553.704)"/>
+        </g>
+        <g class="cls-8" transform="translate(0 .001)">
+            <rect id="Rectangle_355-2" width="95" height="689" class="cls-5" data-name="Rectangle 355" rx="47.5" transform="rotate(67 732.689 1618.793)"/>
+        </g>
+        <g class="cls-7" transform="translate(0 .001)">
+            <rect id="Rectangle_350-2" width="95" height="489" class="cls-1" data-name="Rectangle 350" rx="47.5" transform="rotate(67 958.52 1484.981)"/>
+        </g>
+        <g class="cls-6" transform="translate(0 .001)">
+            <rect id="Rectangle_359-2" width="75" height="384" class="cls-1" data-name="Rectangle 359" rx="37.5" transform="rotate(67 354.412 1836.835)"/>
+        </g>
+    </g>
+</svg>

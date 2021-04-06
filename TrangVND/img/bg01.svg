@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1166.513" height="817.724" viewBox="0 0 1166.513 817.724">
+    <defs>
+        <style>
+            .cls-1{fill:url(#linear-gradient)}.cls-2{fill:url(#linear-gradient-2)}.cls-3{fill:url(#linear-gradient-5)}.cls-4{filter:url(#Rectangle_352)}.cls-5{filter:url(#Rectangle_357)}.cls-6{filter:url(#Rectangle_356)}.cls-7{filter:url(#Rectangle_351)}.cls-8{filter:url(#Rectangle_360)}
+        </style>
+        <linearGradient id="linear-gradient" x1=".553" x2=".051" y1="1.873" y2="-.516" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#ff5900"/>
+            <stop offset="1" stop-color="#ffc811"/>
+        </linearGradient>
+        <filter id="Rectangle_360" width="978.513" height="506.484" x="0" y="311.24" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <linearGradient id="linear-gradient-2" x1=".553" x2=".509" y1="1.873" y2=".403" xlink:href="#linear-gradient"/>
+        <filter id="Rectangle_351" width="920.554" height="501.503" x="126.958" y="155.187" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-2" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-2" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Rectangle_356" width="920.554" height="501.503" x="213.958" y="295.187" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-3" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-3" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="Rectangle_357" width="707.56" height="429.959" x="458.952" y="11.075" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-4" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-4" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <linearGradient id="linear-gradient-5" x1=".553" x2=".476" y1="1.873" y2="-.377" xlink:href="#linear-gradient"/>
+        <filter id="Rectangle_352" width="908.626" height="436.068" x="148.886" y="0" filterUnits="userSpaceOnUse">
+            <feOffset dy="6"/>
+            <feGaussianBlur result="blur-5" stdDeviation="10"/>
+            <feFlood flood-opacity=".161"/>
+            <feComposite in2="blur-5" operator="in"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g id="Group_164" data-name="Group 164">
+        <g class="cls-8" transform="translate(.003 .004)">
+            <rect id="Rectangle_360-2" width="75" height="966" class="cls-1" data-name="Rectangle 360" rx="37.5" transform="rotate(67 207.056 861.854)"/>
+        </g>
+        <g class="cls-7" transform="translate(.003 .004)">
+            <rect id="Rectangle_351-2" width="101" height="892" class="cls-2" data-name="Rectangle 351" rx="50.5" transform="rotate(67 354.334 828.16)"/>
+        </g>
+        <g class="cls-6" transform="translate(.003 .004)">
+            <rect id="Rectangle_356-2" width="101" height="892" class="cls-2" data-name="Rectangle 356" rx="50.5" transform="rotate(67 292.184 963.933)"/>
+        </g>
+        <g class="cls-5" transform="translate(.003 .004)">
+            <rect id="Rectangle_357-2" width="126" height="650" class="cls-2" data-name="Rectangle 357" rx="63" transform="rotate(67 517.823 838.487)"/>
+        </g>
+        <g class="cls-4" transform="translate(.003 .004)">
+            <rect id="Rectangle_352-2" width="21" height="913" class="cls-3" data-name="Rectangle 352" rx="10.5" transform="rotate(67 492.162 781.621)"/>
+        </g>
+    </g>
+</svg>
